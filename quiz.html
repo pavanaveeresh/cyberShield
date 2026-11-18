@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Quiz - CyberShield</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Cyber Safety Quiz</h1>
+    <p>Test Your Digital Safety Knowledge</p>
+</header>
+
+<main>
+    <h2>Answer the Following Questions</h2>
+
+    <div class="card">
+        <p>1. Should you share your OTP with anyone?</p>
+        <button onclick="checkAnswer(1, 'a')">A. Yes</button>
+        <button onclick="checkAnswer(1, 'b')">B. No</button>
+        <p id="result1"></p>
+    </div>
+
+    <div class="card">
+        <p>2. What should you do with suspicious links?</p>
+        <button onclick="checkAnswer(2, 'a')">A. Click them</button>
+        <button onclick="checkAnswer(2, 'b')">B. Avoid them</button>
+        <p id="result2"></p>
+    </div>
+
+    <div class="card">
+        <p>3. What is phishing?</p>
+        <button onclick="checkAnswer(3, 'a')">A. Stealing information through fake messages</button>
+        <button onclick="checkAnswer(3, 'b')">B. Playing games</button>
+        <p id="result3"></p>
+    </div>
+
+    <div class="card">
+        <p>4. Should you use strong passwords?</p>
+        <button onclick="checkAnswer(4, 'a')">A. Yes</button>
+        <button onclick="checkAnswer(4, 'b')">B. No</button>
+        <p id="result4"></p>
+    </div>
+
+    <div class="card">
+        <p>5. What should you do before making a UPI payment?</p>
+        <button onclick="checkAnswer(5, 'a')">A. Verify the request</button>
+        <button onclick="checkAnswer(5, 'b')">B. Pay immediately</button>
+        <p id="result5"></p>
+    </div>
+
+    <button onclick="showScore()">Submit Quiz</button>
+
+    <h2 id="score"></h2>
+
+    <p><a href="index.html">Back to Home</a></p>
+</main>
+
+<footer>
+    <p>CyberShield | Stay Alert. Stay Safe.</p>
+</footer>
+
+<script>
+
+let answers = {
+    1: "b",
+    2: "b",
+    3: "a",
+    4: "a",
+    5: "a"
+};
+
+let userAnswers = {};
+
+function checkAnswer(question, answer) {
+
+    userAnswers[question] = answer;
+
+    let result = document.getElementById("result" + question);
+
+    if (answer === answers[question]) {
+        result.innerHTML = "Correct Answer!";
+    } else {
+        result.innerHTML = "Incorrect Answer. Try again!";
+    }
+}
+
+function showScore() {
+
+    let score = 0;
+
+    for (let i = 1; i <= 5; i++) {
+
+        if (userAnswers[i] === answers[i]) {
+            score++;
+        }
+    }
+
+    document.getElementById("score").innerHTML =
+        "Your Score: " + score + " / 5";
+
+    localStorage.setItem("quizScore", score);
+}
+
+</script>
+
+</body>
+</html>

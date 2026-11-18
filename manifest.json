@@ -1,0 +1,10 @@
+{
+    "name": "CyberShield",
+    "short_name": "CyberShield",
+    "description": "Cyber Safety and Digital Fraud Awareness",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#f0f4f8",
+    "theme_color": "#123b66"
+}

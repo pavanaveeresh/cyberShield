@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield - Digital Safety</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json"
+</head>
+<body>
+
+    <header>
+        <h1>CyberShield</h1>
+        <p>Think Before You Click. Stay Safe Online.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="awareness.html">Awareness</a>
+        <a href="safety.html">Safety Tips</a>
+        <a href="#quiz">Quiz</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to CyberShield</h2>
+        <p>Protect yourself from digital fraud. Learn how to stay safe online.</p>
+
+        <section class="features">
+
+            <a href="awareness.html" class="card">
+                <h3>Scam Awareness</h3>
+                <p>Learn about different types of online fraud.</p>
+            </a>
+
+            <a href="checker.html" class="card">
+    <h3>Fraud Checker</h3>
+    <p>Understand warning signs in suspicious messages.</p>
+</a>
+
+            <a href="safety.html" class="card">
+                <h3>Safety Tips</h3>
+                <p>Learn how to protect your digital identity.</p>
+            </a>
+
+        <a href="quiz.html" class="card">
+    <h3>Cyber Quiz</h3>
+    <p>Test your cyber safety knowledge.</p>
+</a>
+
+            <a href="report.html" class="card">
+                <h3>Report Fraud</h3>
+                <p>Find official cybercrime reporting guidance.</p>
+            </div>
+
+          <a href="dashboard.html" class="card">
+    <h3>Learning Dashboard</h3>
+    <p>Track your cyber safety learning progress.</p>
+</a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>CyberShield | Stay Alert. Stay Safe.</p>
+    </footer>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js")
+        .then(() => console.log("CyberShield is ready!"))
+        .catch(error => console.log("Service Worker Error:", error));
+}
+</script>
+</body>
+</html>
